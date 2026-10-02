@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>سایت خیریه حضرت ابوالفضل‌العباس (ع)</title>
+<meta name="description" content="سایت معرفی، گزارش‌دهی شفاف و حمایت آنلاین برای خیریه — از پروژه‌ها و گزارش‌ها تا پرداخت امن کمک." />
+<meta property="og:title" content="سایت خیریه حضرت ابوالفضل‌العباس (ع)" />
+<meta property="og:description" content="سایت معرفی، گزارش‌دهی شفاف و حمایت آنلاین برای خیریه — از پروژه‌ها و گزارش‌ها تا پرداخت امن کمک." />
+<link rel="icon" href="logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#022c22; --surface:#063b2e; --text:#ecfdf5; --soft:#a7d8c4; --line:rgba(207,227,216,.18); --chip:rgba(245,158,11,.08); --accent:#f59e0b; --on-accent:#022c22; --accent-line:rgba(245,158,11,.45); --glow:rgba(16,185,129,.22); --shadow:rgba(16,185,129,.35); --title:linear-gradient(180deg,#fff7e6,#f59e0b); }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'Vazirmatn', Tahoma, sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; }
+  .wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+  header.hero { position: relative; padding: 72px 0 56px; text-align: center; }
+  .halo { position: absolute; inset: -20% -10% auto; height: 560px; background: radial-gradient(ellipse at 50% 30%, var(--glow), transparent 62%); pointer-events: none; z-index: -1; }
+  .logo { width: 132px; height: 132px; margin: 0 auto; animation: float 6s ease-in-out infinite, rise .8s ease-out both; filter: drop-shadow(0 18px 40px var(--shadow)); }
+  .logo svg, .logo img { width: 100%; height: 100%; display: block; }
+  h1 { margin: 22px 0 6px; font-size: clamp(32px, 6vw, 54px); line-height: 1.3; font-weight: 800; background: var(--title); -webkit-background-clip: text; background-clip: text; color: transparent; animation: rise .8s .1s ease-out both; }
+  .tagline { margin: 0 auto; max-width: 720px; font-size: clamp(16px, 2.4vw, 20px); color: var(--soft); animation: rise .8s .2s ease-out both; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--chip); font-size: 13px; color: var(--soft); animation: rise .8s .3s ease-out both; }
+  .badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; animation: rise .8s .4s ease-out both; }
+  .btn { display: inline-flex; align-items: center; height: 46px; padding: 0 22px; border-radius: 14px; background: var(--accent); color: var(--on-accent); font-weight: 700; text-decoration: none; transition: transform .2s, box-shadow .2s; box-shadow: 0 10px 26px -10px var(--shadow); }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: scale(.97); }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); box-shadow: none; }
+  section { padding: 44px 0; }
+  h2 { font-size: clamp(22px, 3.4vw, 30px); margin: 0 0 22px; font-weight: 800; }
+  h2 small { display: block; font-size: 14px; font-weight: 500; color: var(--soft); margin-top: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { padding: 22px; border-radius: 20px; background: var(--surface); border: 1px solid var(--line); transition: transform .25s, border-color .25s, box-shadow .25s; }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent-line); box-shadow: 0 18px 40px -22px var(--shadow); }
+  .card h3 { margin: 12px 0 4px; font-size: 17px; }
+  .card p { margin: 0; color: var(--soft); font-size: 14.5px; }
+  .ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--chip); color: var(--accent); font-size: 22px; }
+  ol.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+  .step .n { flex: none; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--on-accent); font-weight: 800; }
+  .step h3 { margin: 0; font-size: 16.5px; }
+  .step p { margin: 2px 0 0; color: var(--soft); font-size: 14.5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { padding: 6px 12px; border-radius: 999px; background: var(--chip); border: 1px solid var(--line); font-size: 13px; color: var(--soft); }
+  .note { margin-top: 18px; padding: 18px 20px; border-radius: 18px; border: 1px dashed var(--accent-line); background: var(--chip); color: var(--soft); font-size: 14.5px; }
+  footer { padding: 36px 0 48px; text-align: center; color: var(--soft); font-size: 13px; border-top: 1px solid var(--line); margin-top: 24px; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease-out, transform .7s cubic-bezier(.22,1,.36,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="halo"></div>
+    <div class="wrap">
+      <div class="logo"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#047857"/></linearGradient></defs><rect width="120" height="120" rx="30" fill="url(#g)"/><path d="M60 92 C30 72 22 56 30 42 c6 -11 22 -12 30 0 c8 -12 24 -11 30 0 c8 14 0 30 -30 50z" fill="#fff7e6"/><circle cx="60" cy="58" r="7" fill="#f59e0b"/></svg></div>
+      <h1>خیریه حضرت ابوالفضل‌العباس (ع)</h1>
+      <p class="tagline">سایت معرفی، گزارش‌دهی شفاف و حمایت آنلاین برای خیریه — از پروژه‌ها و گزارش‌ها تا پرداخت امن کمک.</p>
+      <div class="badge">در حال اجرا روی aasscharity.ir</div>
+      <div class="ctas">
+          <a class="btn " href="https://aasscharity.ir" rel="noopener">رفتن به aasscharity.ir</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>چه می‌کند<small>شفافیت برای خیّران، سادگی برای خیریه</small></h2>
+      <div class="grid">
+        <article class="card reveal"><div class="ic">💚</div><h3>معرفی و پروژه‌ها</h3><p>درباره‌ی خیریه و پروژه‌های جاری، با تصویر و جزئیات.</p></article>
+        <article class="card reveal"><div class="ic">🧾</div><h3>گزارش‌های شفاف</h3><p>گزارش کارها و هزینه‌ها برای هر کسی که کمک کرده یا می‌خواهد کمک کند.</p></article>
+        <article class="card reveal"><div class="ic">💳</div><h3>حمایت آنلاین</h3><p>پرداخت امن کمک از طریق درگاه بانکی و نمایش نتیجه‌ی پرداخت.</p></article>
+        <article class="card reveal"><div class="ic">🤝</div><h3>پنل خیّر</h3><p>هر خیّر با حساب خودش کمک‌ها و پیام‌هایش را می‌بیند.</p></article>
+        <article class="card reveal"><div class="ic">⚙️</div><h3>پنل مدیریت</h3><p>محتوای سایت، پروژه‌ها و گزارش‌ها بی‌نیاز به برنامه‌نویس به‌روز می‌شوند.</p></article>
+        <article class="card reveal"><div class="ic">🔔</div><h3>ایمیل و ارتباط</h3><p>فرم تماس و ایمیل‌های خودکار برای ارتباط با خیّران.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>چطور کار می‌کند<small>ساده روی هاست اشتراکی</small></h2>
+      <ol class="steps">
+        <li class="step reveal"><span class="n">۱</span><div><h3>خیریه محتوا را می‌گذارد</h3><p>از پنل مدیریت، پروژه‌ها و گزارش‌ها منتشر می‌شوند.</p></div></li>
+        <li class="step reveal"><span class="n">۲</span><div><h3>خیّر می‌بیند و انتخاب می‌کند</h3><p>پروژه‌ای را که دوست دارد پیدا می‌کند و جزئیاتش را می‌خواند.</p></div></li>
+        <li class="step reveal"><span class="n">۳</span><div><h3>آنلاین کمک می‌کند</h3><p>پرداخت امن، رسید، و دیدن کمک‌ها در پنل خودش.</p></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>ساخته‌شده با</h2>
+      <div class="chips reveal"><span class="chip">Vue 3</span><span class="chip">Vite</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">cPanel</span></div>
+      <p class="note reveal">کد این پروژه خصوصی است؛ این صفحه فقط برای معرفی آن است.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">خیریه حضرت ابوالفضل‌العباس (ع) · ۱۴۰۵ · <a href="https://github.com/aaal25882">github.com/aaal25882</a></div>
+  </footer>
+
+<script>
+  // کارت‌ها هنگام پیمایش نرم ظاهر می‌شوند
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (e) { e.classList.add('in'); }); return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en, i) {
+        if (!en.isIntersecting) return;
+        en.target.style.transitionDelay = (i % 4) * 70 + 'ms';
+        en.target.classList.add('in'); io.unobserve(en.target);
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+</body>
+</html>
